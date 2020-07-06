@@ -8,6 +8,10 @@ public class Person {
         MALE, FEMALE
     }
 
+    interface CheckPerson {
+        boolean test(Person p);
+    }
+
     String name;
     LocalDate birthday;
     Sex gender;
@@ -34,11 +38,21 @@ public class Person {
         }
     }
 
+    /**
+     * generalized search methods
+     * @param roster
+     * @param fromAge
+     * @param toAge
+     */
     public static void printPersonWithinAgeRange(List<Person> roster, int fromAge, int toAge   ) {
         for(Person p: roster) {
             if(fromAge <= p.getAge() && p.getAge() < toAge) {
                 p.printPerson();
             }
         }
+    }
+
+    public static void printPerons(List<Person> roster, CheckPerson tester) {
+
     }
 }
