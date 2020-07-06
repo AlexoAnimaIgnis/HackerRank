@@ -1,6 +1,7 @@
 package main.com.java.lambdas;
 
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public class RosterPerson {
@@ -71,6 +72,24 @@ public class RosterPerson {
         for(Person p: roster) {
             if(tester.test(p)){
                 p.printPerson();
+            }
+        }
+    }
+
+    /**
+     * process roster using consumer block
+     * @param roster
+     * @param tester
+     * @param block
+     */
+    public static void processPersons(
+            List<Person> roster,
+            Predicate<Person> tester,
+            Consumer<Person> block
+    ) {
+        for(Person p: roster){
+            if(tester.test(p)){
+                block.accept(p);
             }
         }
     }
