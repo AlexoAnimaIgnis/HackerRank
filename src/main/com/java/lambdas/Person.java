@@ -12,6 +12,16 @@ public class Person {
         boolean test(Person p);
     }
 
+    class CheckPersonEligibleForSelectiveService implements CheckPerson {
+
+        @Override
+        public boolean test(Person p) {
+            return p.gender == Sex.MALE &&
+                    p.getAge() >= 18 &&
+                    p.getAge() <= 25;
+        }
+    }
+
     String name;
     LocalDate birthday;
     Sex gender;
@@ -52,7 +62,16 @@ public class Person {
         }
     }
 
-    public static void printPerons(List<Person> roster, CheckPerson tester) {
-
+    /**
+     * search criteria in a local class
+     * @param roster
+     * @param tester
+     */
+    public static void printPersons(List<Person> roster, CheckPerson tester) {
+        for(Person p: roster) {
+            if(tester.test(p)) {
+                p.printPerson();
+            }
+        }
     }
 }
