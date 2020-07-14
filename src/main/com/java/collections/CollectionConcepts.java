@@ -29,12 +29,19 @@ public class CollectionConcepts {
         }
 
         System.out.println(products);
+        System.out.println(products.size());
+        System.out.println(products.isEmpty());
 
+        System.out.println(products.contains(window));
+        System.out.println(products.contains(door));
 
-        /** for each construct
-        for(Product product: products) {
-            System.out.println(product);
-        }*/
+        Collection<Product> otherProducts = new ArrayList<>();
+        otherProducts.add(window);
+        otherProducts.add(door);
 
+        products.removeAll(otherProducts);
+        products.remove(window);
+
+        System.out.println(products);
     }
 }
