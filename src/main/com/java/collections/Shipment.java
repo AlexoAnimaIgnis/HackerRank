@@ -6,6 +6,7 @@ import java.util.List;
 
 public class Shipment implements Iterable<Product> {
     private static final int LIGHT_VAN_MAX_WEIGHT = 20;
+    public static final int PRODUCT_NOT_PRESENT = -1;
 
     private final List<Product> products = new ArrayList<>();
 
@@ -14,9 +15,11 @@ public class Shipment implements Iterable<Product> {
     }
 
     public void replace(Product oldProduct, Product newProduct) {
-        //find the index of the old product and use set to update the value
+        //find the index of the old product and use set to use value
         final int index = products.indexOf(oldProduct);
-        products.set(index, newProduct);
+        if(index != PRODUCT_NOT_PRESENT) {
+            products.set(index, newProduct);
+        }
     }
 
     public void remove(Product product) {
