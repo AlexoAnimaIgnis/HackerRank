@@ -47,8 +47,14 @@ public class Shipment implements Iterable<Product> {
         return 0;
     }
 
-    public List<Product> getHeavyVanProducts() { return heavyVanProducts;}
-    public List<Product> getLightVanProducts() { return lightVanProducts;}
+    public List<Product> getHeavyVanProducts() {
+        return heavyVanProducts;
+    }
+
+    public List<Product> getLightVanProducts() {
+        return lightVanProducts;
+    }
+
     @Override
     public Iterator<Product> iterator() {
         return products.iterator();
