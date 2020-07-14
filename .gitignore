@@ -25,3 +25,4 @@ yarn-error.log*
 .idea
 HackerRank.iml
 sh.exe.stackdump
+out
