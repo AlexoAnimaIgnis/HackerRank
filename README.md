@@ -41,7 +41,7 @@ Implementation
 - performance characteristics
 - concrete and instantiable
 
-#Collections Behavior
+# Collections Behavior
 Collection interface extends another interface named Iterable. What this means is that,
 once you extend this, you can extract an iterator that acts as a cursor that allows
 you to iterate over elements
@@ -58,7 +58,7 @@ Methods
 - containsAll(collection)
 - clear()
 
-#List Interface
+# List Interface
 What is a list?
 - collection with iteration order, Meaning it may or may not
 be sorted. Elements can be accessed through index that usually

@@ -1,6 +1,10 @@
 package main.com.java.collections;
 
+import java.util.Comparator;
+
 public class Product {
+    public static Comparator<Product> BY_WEIGHT = Comparator.comparing(Product::getWeight);
+    public static Comparator<Product> BY_NAME = Comparator.comparing(Product::getName);
     private final String name;
     private final int weight;
 

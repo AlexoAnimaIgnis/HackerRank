@@ -10,6 +10,9 @@ public class Shipment implements Iterable<Product> {
 
     private final List<Product> products = new ArrayList<>();
 
+    private List<Product> lightVanProducts;
+    private List<Product> heavyVanProducts;
+
     public void add(Product product){
         products.add(product);
     }
@@ -22,10 +25,30 @@ public class Shipment implements Iterable<Product> {
         }
     }
 
-    public void remove(Product product) {
-        products.remove(product);
+    public void prepare() {
+        // sort our list of products by weight
+        products.sort(Product.BY_WEIGHT);
+
+        // find the product index that needs heavy van
+        int splitPoint = findSplitPoint();
+
+        // assign views of the product list for heavy and light vans
+        lightVanProducts = products.subList(0, splitPoint);
+        heavyVanProducts = products.subList(splitPoint, products.size());
     }
 
+    private int findSplitPoint() {
+        for(int i = 0; i < products.size(); i++){
+            final Product product = products.get(i);
+            if(product.getWeight() > LIGHT_VAN_MAX_WEIGHT) {
+                return i;
+            }
+        }
+        return 0;
+    }
+
+    public List<Product> getHeavyVanProducts() { return heavyVanProducts;}
+    public List<Product> getLightVanProducts() { return lightVanProducts;}
     @Override
     public Iterator<Product> iterator() {
         return products.iterator();
