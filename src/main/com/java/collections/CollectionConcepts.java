@@ -16,10 +16,16 @@ public class CollectionConcepts {
         products.add(floorpanel);
         products.add(window);
 
-        /** Using iterator interface */
+        /** Using iterator interface
         final Iterator<Product> productIterator = products.iterator();
         while(productIterator.hasNext()) {
             Product product = productIterator.next();
+            System.out.println(product);
+        }*/
+
+
+        /** for each construct */
+        for(Product product: products) {
             System.out.println(product);
         }
 
