@@ -58,3 +58,25 @@ Methods
 - containsAll(collection)
 - clear()
 
+#List Interface
+What is a list?
+- collection with iteration order, Meaning it may or may not
+be sorted. Elements can be accessed through index that usually
+starts with 0, 1, n+
+- index is an int that represents the position on the list
+
+Methods:
+- void add(int index, E e);
+- E get(int index);
+- E remove(int index);
+- E set(int index, E element);
+- boolean addAll(int index, Collection<? extends E> c);
+- int indexOf(Object o);
+- int lastIndexOf(Object o);
+
+Sublist is a view over ranges of Lists. If you modified the
+view (sublist), you also modify the LIST.
+- List<E> subList(int fromIndex, int toIndex);
+
+
+
