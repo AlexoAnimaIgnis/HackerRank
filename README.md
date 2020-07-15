@@ -136,3 +136,25 @@ EnumSet
 - specialized data structure
 - only allows ENUM as elements
 
+SortedSet and NavigableSet
+- collections that are DISTINCT and have an order
+
+SortedSet Methods
+- E first();
+- E last();
+- SortedSet<E> tailSet(E fromElement); returns element for example
+you define tailset(4) you will get elements 4, 5, 6...
+- SortedSet<E> headSet(E toElement); returns exclusive element
+for example headSet(4) you will get elements 1, 2, 3...
+- SortedSet<E> subSet(E fromElement, E toElement)
+
+NavigableSet extends SortedSet further
+
+Navigable set provides ways to move through the order (implemented by TreeSet)
+- E lower(E e);
+- E higher(E e);
+- E floor(E e);
+- E ceiling(E e);
+- E pollFirst(E e);
+- E pollLast(E e);
+
