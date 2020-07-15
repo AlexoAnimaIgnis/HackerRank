@@ -108,3 +108,31 @@ Performance operation
 # SET
 Sets are collections with DISTINCT elements. There are NO duplicates.
 
+Set Implementations:
+
+HashSet 
+- set based upon HashMap.
+- calls hashCode() on element and looks up location
+- good general purpose implementation (resizes when it runs out
+of space)
+
+The equals hashcode contract
+
+object.equals(other) means that object.hashCode() == other.hashCode()
+
+How do we implement correct HashCodes?
+- combine hashCode information from EACH FIELD
+- value based equality sample formula (
+result = 31 * result + obj.hashCode()
+) or you can let your IDE do the heavy lifting.
+- or built in JDK Objects.hashCode()
+- ALWAYS use the same fields as equals()
+
+TreeSet
+- based upon TreeMap which uses BinaryTree with a required sort order
+- keeps elements in the given order (SortedSet and NavigableSet)
+
+EnumSet
+- specialized data structure
+- only allows ENUM as elements
+

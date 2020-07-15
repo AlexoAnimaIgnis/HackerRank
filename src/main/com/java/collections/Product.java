@@ -1,6 +1,7 @@
 package main.com.java.collections;
 
 import java.util.Comparator;
+import java.util.Objects;
 
 public class Product {
     public static Comparator<Product> BY_WEIGHT = Comparator.comparing(Product::getWeight);
@@ -35,5 +36,18 @@ public class Product {
                 "name='" + name + '\'' +
                 ", weight=" + weight +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Product)) return false;
+        Product product = (Product) o;
+        return Objects.equals(getName(), product.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getWeight());
     }
 }
