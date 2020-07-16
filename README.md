@@ -169,6 +169,35 @@ PriorityQueue
 - queues in which the order of the elements that come out is defined by the priority
 - "priority" just really means ordering - meaning the order you specify
 
+# Stacks
+
+- implements concept of LIFO meaning Last element inserted is the FIRST element OUT ex. inserted 1, 2, 3 --> 3, 2, 1
+- java.util.Stack is deprecated
+- java introduced DEQUE where you can add/remove on the tail or the head
+
+# Deque Methods
+
+- boolean offerFirst(E e); * returns false if queue is full
+- boolean offerLast(E e);
+- void addFirst(E e); * throws excception when queue is full
+- void addLast(E e);
+
+- E removeFirst(); * throws Exception when queue is empty
+- E removeLast();
+- E pollFirst(); * returns null when queue is empty
+- E pollLast();
+
+- E getFirst();
+- E getLast();
+- E peekFirst();
+- E peekLast();
+
+- void push(E e); - for STACK
+- E pop(); - for STACK
+
+
+
+
 Operations:
 - boolean offer(E e) returns FALSE if the QUEUE is already FULL
 - boolean add(E e) returns EXCEPTIONS if the queue is already FULL (will return false if the element is alreadyy present)
