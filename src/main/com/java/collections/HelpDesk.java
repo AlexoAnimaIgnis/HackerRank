@@ -2,6 +2,7 @@ package main.com.java.collections;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
+import java.util.function.Predicate;
 
 public class HelpDesk {
 
@@ -12,23 +13,23 @@ public class HelpDesk {
     }
 
     public void processPrinterEnquiry() {
+        processEnquiry(enquiry -> enquiry.getCategory() == Category.PRINTER,
+                "Is it out of paper?");
+    }
+
+    private void processEnquiry(Predicate<Enquiry> predicate, String message) {
         final Enquiry enquiry = enquiries.peek();
-        if(enquiry != null && enquiry.getCategory() == Category.PRINTER){
+        if(enquiry != null && predicate.test(enquiry)){
             enquiries.remove();
-            enquiry.getCustomer().reply("Is it out of paper?");
+            enquiry.getCustomer().reply(message);
         } else {
             System.out.println("No work to do, let's have some coffee!");
         }
     }
 
     public void processGeneralEnquiry() {
-        final Enquiry enquiry = enquiries.peek();
-        if(enquiry != null && enquiry.getCategory() != Category.PRINTER){
-            enquiries.remove();
-            enquiry.getCustomer().reply("Have you tried turning it on and off again?");
-        } else {
-            System.out.println("No work to do, let's have some coffee");
-        }
+        processEnquiry(enquiry -> enquiry.getCategory() != Category.PRINTER,
+                "Have you tried turning it on and off again?");
     }
 
     public void processAllEnquiries() {
