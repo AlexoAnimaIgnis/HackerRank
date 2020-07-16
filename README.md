@@ -187,13 +187,13 @@ PriorityQueue
 - E pollFirst(); * returns null when queue is empty
 - E pollLast();
 
-- E getFirst();
+- E getFirst(); * throws Exception when queue is empty
 - E getLast();
-- E peekFirst();
+- E peekFirst(); * returns null if queue is empty
 - E peekLast();
 
-- void push(E e); - for STACK
-- E pop(); - for STACK
+- void push(E e); - ADDING for STACK LIFO SEMANTICS
+- E pop(); - REMOVING for STACK LIFO SEMANTICS
 
 
 
