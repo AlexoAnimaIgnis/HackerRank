@@ -165,6 +165,10 @@ out first.
 
 i.e 2, 3, 1, 4 --> 2, 3, 1, 4
 
+PriorityQueue
+- queues in which the order of the elements that come out is defined by the priority
+- "priority" just really means ordering - meaning the order you specify
+
 Operations:
 - boolean offer(E e) returns FALSE if the QUEUE is already FULL
 - boolean add(E e) returns EXCEPTIONS if the queue is already FULL (will return false if the element is alreadyy present)
