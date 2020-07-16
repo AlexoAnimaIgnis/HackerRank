@@ -195,6 +195,19 @@ PriorityQueue
 - void push(E e); - ADDING for STACK LIFO SEMANTICS
 - E pop(); - REMOVING for STACK LIFO SEMANTICS
 
+Implementations of Queue
+
+ArrayDeque
+- ringBuffer based implementation
+- has constant time in ADDITION/REMOVAL O(1)
+- less memory consumption and faster
+- but no random access 
+
+LinkedList
+- seldom used as a queue
+- has random access but its O(n)
+- allows null elements
+
 
 
 
