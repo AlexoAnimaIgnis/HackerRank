@@ -158,3 +158,17 @@ Navigable set provides ways to move through the order (implemented by TreeSet)
 - E pollFirst(E e);
 - E pollLast(E e);
 
+# Queues
+
+Queues are FIRST IN FIRST OUT data structures. That means that the first element that goes into the queue is the element that comes 
+out first.
+
+i.e 2, 3, 1, 4 --> 2, 3, 1, 4
+
+Operations:
+- boolean offer(E e) returns FALSE if the QUEUE is already FULL
+- boolean add(E e) returns EXCEPTIONS if the queue is already FULL (will return false if the element is alreadyy present)
+- E remove() returns EXCECPTIONS if the QUEUE is EMPTY
+- E poll() returns null if the queue is empty
+- E element() viewing element without removing. throws exception when QUEUE is EMPTY
+- E peek() viewing element without removing. returns null when quueue is empty
