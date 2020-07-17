@@ -218,3 +218,9 @@ Operations:
 - E poll() returns null if the queue is empty
 - E element() viewing element without removing. throws exception when QUEUE is EMPTY
 - E peek() viewing element without removing. returns null when quueue is empty
+
+# Map
+
+- is a collection of pairs of values. Think of a dictionary
+- each key -> value
+- maps have unique key (determined by hashcode equals or comparator equal)
