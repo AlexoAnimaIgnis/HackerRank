@@ -264,3 +264,11 @@ Methods
 - Map.Entry<K, V> lastEntry();
 - Map.Entry<K, V> pollFirstEntry(); removes element as well as returning it
 - Map.Entry<K, V> pollLastEntry; removes element as well as returning it
+- Map.Entry<K, V> lowerEntry(K key); provides greatest element less than the key
+- Map.Entry<K, V> higherEntry(K key); provides lowest element greater than the kkey
+- K lowerKey(K key); 
+- K higherKey(K key);
+- Map.Entry<K, V> floorEntry(K key);
+- Map.Entry<K, V> ceilingEntry(K key);
+- K floorEntry(K key);
+- K higherKey(K key);
