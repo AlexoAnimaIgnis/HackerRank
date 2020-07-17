@@ -242,3 +242,25 @@ Views Over Maps
 - keySet() returns unique set of KEYS
 - values() returns a collection of values; not guranteed to be unique
 - entrySet() use it if you want to iterate over a map. it is a set of key value tree of elements
+
+Sorted and Navigable Maps
+- traversal in key ASCENDING order
+
+SortedMap 
+- defines an interface for a map with ordering
+- its subviews are based upon KEY
+
+Methods
+- K firstKey();
+- K lastKey();
+- SortedMap<K, V> tailMap(E fromKey);
+- SortedMap<K, V> headMap(E toKey);
+- SortedMap<K fromKey, K toKey);
+
+NavigableMap
+
+Methods
+- Map.Entry<K, V> firstEntry();
+- Map.Entry<K, V> lastEntry();
+- Map.Entry<K, V> pollFirstEntry(); removes element as well as returning it
+- Map.Entry<K, V> pollLastEntry; removes element as well as returning it
