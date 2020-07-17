@@ -34,6 +34,12 @@ public class ViewsOverMaps {
 
 //        products.add(ProductFixtures.window); will throw unsupported exception
 
-        
+        final Set<Map.Entry<Integer, Product>> entries = idToProduct.entrySet();
+        for(Map.Entry<Integer, Product> entry: entries) {
+            System.out.println(entry.getKey() + "-->" + entry.getValue());
+            entry.setValue(ProductFixtures.floorPanel);
+        }
+
+        System.out.println(idToProduct);
     }
 }

@@ -239,4 +239,6 @@ Map API
 - boolean isEmpty()
 
 Views Over Maps
-- keySet(), valueSet(), entrySet()
+- keySet() returns unique set of KEYS
+- values() returns a collection of values; not guranteed to be unique
+- entrySet() use it if you want to iterate over a map. it is a set of key value tree of elements
