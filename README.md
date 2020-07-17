@@ -224,3 +224,19 @@ Operations:
 - is a collection of pairs of values. Think of a dictionary
 - each key -> value
 - maps have unique key (determined by hashcode equals or comparator equal)
+- DOES NOT IMPLEMENT THE COLLECTION INTERFACE
+
+Map API
+- V put(K key, V value); used for single value
+- void putAll(Map<? extends K, ? extends V> values); used for putting another map
+- nulls key/values are not supported (or depends on the implementation)
+- V get(Object key)
+- boolean containsKey(Object key)
+- boolean containsValue(Object value)
+- V remove(Object key)
+- void clear()
+- int size()
+- boolean isEmpty()
+
+Views Over Maps
+- keySet(), valueSet(), entrySet()
