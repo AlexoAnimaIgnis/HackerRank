@@ -272,3 +272,7 @@ Methods
 - Map.Entry<K, V> ceilingEntry(K key);
 - K floorEntry(K key);
 - K higherKey(K key);
+
+# General Purpose Map
+
+HashMap, LinkedHashMap and TreeMap
