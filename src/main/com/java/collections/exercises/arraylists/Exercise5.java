@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Write a Java program to update specific array element by given element
  */
-public class Exercises5 {
+public class Exercise5 {
     public static void main(String... args) {
         List<String> colors = new ArrayList<>();
         colors.add("Red");
