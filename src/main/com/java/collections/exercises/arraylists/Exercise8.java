@@ -28,8 +28,6 @@ public class Exercise8 {
          */
         Collections.sort(colors);
         colors.stream().forEach(s -> { System.out.println(s);});
-
-
     }
 }
 
